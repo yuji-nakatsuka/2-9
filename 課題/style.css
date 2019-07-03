@@ -1,0 +1,89 @@
+ /* ブラウザがそれぞれ持っているCSSをリセットするため */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color:#6c6b6b;
+}
+
+.clearfix::after {
+	content:"";
+	display:block;
+	clear:both;
+}
+
+p,h3 {
+	color:black;
+}
+
+.title {
+	margin-top:9px;
+	margin-bottom:5px;
+}
+
+
+main {
+	padding:50px 0;
+}
+
+.boxes {
+	width:960px;
+	margin:0 auto;
+}
+
+
+.box {
+	float:left;
+	width:300px;
+	border:solid 1px lightgray;
+	position: relative;
+	padding:10px;
+}
+
+.box:nth-child(1) ,.box:nth-child(2){
+	margin-right:30px;
+}
+
+
+.box img{
+	width:280px;
+	height:150px;
+	object-fit: cover;
+	object-position: bottom;
+}
+
+.label {
+	background-color:orange ;
+	position: absolute;
+	top:0;
+	left:0;
+	color:white;
+	padding:3px;
+}
+
+@media screen and (max-width: 768px){
+
+main {width:100%;}
+
+.boxes {
+	width: 100%;
+	margin:0;
+}
+
+.box {
+	float:none;
+	width: 90%;
+	margin:0 5%;
+}
+
+.box:nth-child(1) ,.box:nth-child(2){
+	margin-right:0px;
+	margin-bottom:20px;
+}
+
+.box img{
+	width:100%;
+}
+
+
+}
